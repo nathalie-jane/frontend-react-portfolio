@@ -1,0 +1,29 @@
+/* ===================================
+    GLOBAL
+    
+	Base page layout and background
+    styles
+====================================== */
+
+/* Default page background color */
+body {
+	background-color: #fafaf9;
+}
+
+/* Main page wrapper */
+.site-container {
+	min-height: 100vh;
+	min-width: 20rem;
+}
+
+/* Main content area */
+.site-main {
+	width: 100%;
+	padding-inline: 16px;
+}
+
+/* @media screen and (min-width: 48rem) {
+	.site-main {
+		padding-inline: 32px;
+	}
+} */
