@@ -109,6 +109,10 @@
 	background-color: #1c1917;
 	border: 1px solid #1c1917;
 	border-radius: 12px;
+
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
 }
 
 /* Repo link label */
@@ -125,7 +129,7 @@
 	font-size: 0.875rem;
 }
 
-/*  Responsive adjustments for tablet */
+/* Responsive adjustments for tablet */
 @media screen and (min-width: 48rem) {
 	.project-card__content {
 		gap: 20px;
@@ -137,8 +141,16 @@
 	}
 }
 
-/* @media screen and (min-width: 75rem) {
+/* Responsive adjustments for desktop */
+@media screen and (min-width: 75rem) {
+	/* Hover state for repo link button */
 	.project-card__link:hover {
-		color: #1c1917;
+		transform: scale(1.05);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 	}
-} */
+
+	/* Visited state for repo link button */
+	.project-card__link:visited {
+		color: #ffffff;
+	}
+}

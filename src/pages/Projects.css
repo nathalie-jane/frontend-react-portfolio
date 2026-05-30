@@ -52,7 +52,7 @@
 	gap: 32px;
 }
 
-/*  Responsive adjustments for tablet */
+/* Responsive adjustments for tablet */
 @media screen and (min-width: 48rem) {
 	.projects {
 		padding-block: 56px;
@@ -79,5 +79,11 @@
 	}
 }
 
-/* @media screen and (min-width: 75rem) {
-} */
+/* Responsive adjustments for desktop */
+@media screen and (min-width: 75rem) {
+	/* 3-column grid for project cards */
+	.projects__collection {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+	}
+}
