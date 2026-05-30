@@ -1,0 +1,59 @@
+/* =======================================
+    SECTION: PROJECTS
+
+	Layout and styling for projects 
+	section
+========================================== */
+
+/* Main container for the projects section */
+.projects {
+	width: 100%;
+	padding-block: 48px;
+}
+
+/* Inner container for projects section */
+.projects__inner {
+	width: 100%;
+	max-width: 75rem;
+	margin-inline: auto;
+}
+
+/* Text block wrapper */
+.projects__heading {
+	display: grid;
+	justify-items: center;
+	gap: 8px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+/* Main section title */
+.projects__title {
+	color: #1c1917;
+	font-size: 1.75rem;
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 0.02rem;
+}
+
+/* Intro text below title */
+.projects__intro {
+	color: #57534d;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.015rem;
+}
+
+/* Grid layout for project cards */
+.projects__collection {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 32px;
+}
+
+/* @media screen and (min-width: 48rem) {
+}
+
+@media screen and (min-width: 64rem) {
+} */
