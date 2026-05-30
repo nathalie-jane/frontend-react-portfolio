@@ -27,8 +27,8 @@
 
 /* Wrapper for main content */
 .project-card__content {
-	display: grid;
-	grid-template-rows: auto auto 1fr auto;
+	display: flex;
+	flex-direction: column;
 	gap: 16px;
 	padding: 24px 16px;
 }
@@ -71,6 +71,11 @@
 	padding-left: 4px;
 }
 
+.project-card:nth-child(2) .project-card__group,
+.project-card:nth-child(3) .project-card__group {
+	margin-bottom: 16px;
+}
+
 /* Individual project info block */
 .project-card__info {
 	display: grid;
@@ -99,11 +104,11 @@
 /* Repo button link */
 .project-card__link {
 	display: inline-flex;
-	justify-self: flex-start;
+	align-self: flex-start;
 	align-items: baseline;
 	gap: 8px;
 	margin-left: 4px;
-	margin-top: 12px;
+	margin-top: auto;
 	padding: 10px 16px;
 	color: #ffffff;
 	background-color: #1c1917;
