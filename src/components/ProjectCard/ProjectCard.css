@@ -1,11 +1,13 @@
 /* =======================================
     COMPONENT: PROJECT CARD
-    
+
     Project card component styles
 ========================================== */
 
 /* Main project card container */
 .project-card {
+	display: grid;
+	grid-template-rows: auto 1fr;
 	overflow-x: hidden;
 	background-color: #ffffff;
 	border: 1px solid #e7e5e4;
@@ -26,6 +28,7 @@
 /* Wrapper for main content */
 .project-card__content {
 	display: grid;
+	grid-template-rows: auto auto 1fr auto;
 	gap: 16px;
 	padding: 24px 16px;
 }
@@ -122,10 +125,19 @@
 	font-size: 0.875rem;
 }
 
-/* @media screen and (min-width: 48rem) {
+/*  Responsive adjustments for tablet */
+@media screen and (min-width: 48rem) {
+	.project-card__content {
+		gap: 20px;
+		padding: 24px 20px;
+	}
+
+	.project-card__group {
+		gap: 20px;
+	}
 }
 
-@media screen and (min-width: 64rem) {
+/* @media screen and (min-width: 75rem) {
 	.project-card__link:hover {
 		color: #1c1917;
 	}

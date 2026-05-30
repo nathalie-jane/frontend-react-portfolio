@@ -30,7 +30,7 @@
 /* Main section title */
 .projects__title {
 	color: #1c1917;
-	font-size: 1.75rem;
+	font-size: clamp(1.75rem, 1.571rem + 0.893vw, 2rem);
 	font-weight: 400;
 	line-height: 1.2;
 	letter-spacing: 0.02rem;
@@ -39,7 +39,7 @@
 /* Intro text below title */
 .projects__intro {
 	color: #57534d;
-	font-size: 1rem;
+	font-size: clamp(1rem, 0.911rem + 0.446vw, 1.125rem);
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.015rem;
@@ -52,8 +52,32 @@
 	gap: 32px;
 }
 
-/* @media screen and (min-width: 48rem) {
+/*  Responsive adjustments for tablet */
+@media screen and (min-width: 48rem) {
+	.projects {
+		padding-block: 56px;
+	}
+
+	.projects__heading {
+		margin-bottom: 48px;
+	}
+
+	.projects__title {
+		font-size: 2rem;
+		letter-spacing: 0.03rem;
+	}
+
+	.projects__intro {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		letter-spacing: 0.02rem;
+	}
+
+	/* 2-column grid for project cards */
+	.projects__collection {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
-@media screen and (min-width: 64rem) {
+/* @media screen and (min-width: 75rem) {
 } */

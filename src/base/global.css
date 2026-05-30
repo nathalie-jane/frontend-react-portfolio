@@ -22,8 +22,8 @@ body {
 	padding-inline: 16px;
 }
 
-/* @media screen and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
 	.site-main {
 		padding-inline: 32px;
 	}
-} */
+}
