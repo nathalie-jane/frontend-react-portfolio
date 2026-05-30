@@ -1,0 +1,132 @@
+/* =======================================
+    COMPONENT: PROJECT CARD
+    
+    Project card component styles
+========================================== */
+
+/* Main project card container */
+.project-card {
+	overflow-x: hidden;
+	background-color: #ffffff;
+	border: 1px solid #e7e5e4;
+	border-radius: 12px;
+	box-shadow:
+		0 1px 3px 0 rgba(0, 0, 0, 0.1),
+		0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Project screenshot image */
+.project-card__image {
+	height: auto;
+	object-fit: cover;
+	background-color: #e7e5e4;
+	border-bottom: 1px solid #e7e5e4;
+}
+
+/* Wrapper for main content */
+.project-card__content {
+	display: grid;
+	gap: 16px;
+	padding: 24px 16px;
+}
+
+/* Project title text */
+.project-card__title {
+	margin-bottom: 8px;
+	padding-left: 4px;
+	color: #1c1917;
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1.3;
+	letter-spacing: 0.02rem;
+}
+
+/* List of technologies */
+.project-card__tech-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+/* Individual tech tag */
+.project-card__tech-item {
+	padding: 4px 12px;
+	color: #44403b;
+	font-size: 0.813rem;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.03rem;
+	background-color: #f5f5f4;
+	border: 1px solid #d4d4d4;
+	border-radius: 12px;
+}
+
+/* Wrapper for project info blocks  */
+.project-card__group {
+	display: grid;
+	gap: 16px;
+	padding-left: 4px;
+}
+
+/* Individual project info block */
+.project-card__info {
+	display: grid;
+	gap: 4px;
+}
+
+/* Heading for each info block */
+.project-card__info-title {
+	color: #1c1917;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.03rem;
+	text-transform: capitalize;
+}
+
+/* Text content for each info block */
+.project-card__info-text {
+	color: #57534d;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.6;
+	letter-spacing: 0.015rem;
+}
+
+/* Repo button link */
+.project-card__link {
+	display: inline-flex;
+	justify-self: flex-start;
+	align-items: baseline;
+	gap: 8px;
+	margin-left: 4px;
+	margin-top: 12px;
+	padding: 10px 16px;
+	color: #ffffff;
+	background-color: #1c1917;
+	border: 1px solid #1c1917;
+	border-radius: 12px;
+}
+
+/* Repo link label */
+.project-card__repo-link {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.03rem;
+	text-transform: capitalize;
+}
+
+/* GitHub icon in repo link */
+.project-card__repo-icon {
+	font-size: 0.875rem;
+}
+
+/* @media screen and (min-width: 48rem) {
+}
+
+@media screen and (min-width: 64rem) {
+	.project-card__link:hover {
+		color: #1c1917;
+	}
+} */

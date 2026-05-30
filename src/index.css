@@ -1,5 +1,8 @@
 /* =======================================
     BASE IMPORTS
+
+    Imports base stylesheets for the 
+    entire site
 ========================================== */
 
 @import "./base/normalize.css";

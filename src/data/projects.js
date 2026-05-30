@@ -5,9 +5,9 @@
     cards
 ============================================== */
 
-import cafeNoraImage from "../assets/images/cafe-nora-landing-page.webp";
-import javascriptAssignmentsImage from "../assets/images/javascript-assignments-overview.webp";
-import bhromaonImage from "../assets/images/bhromaon-travel-landing-page.webp";
+import cafeNoraProjectImage from "../assets/images/project-cafe-nora.webp";
+import jsAssignmentsProjectImage from "../assets/images/project-js-assignments.webp";
+import bhromaonProjectImage from "../assets/images/project-bhromaon.webp";
 
 /* --------------------------------------
     PROJECTS ARRAY
@@ -20,7 +20,7 @@ import bhromaonImage from "../assets/images/bhromaon-travel-landing-page.webp";
 const projects = [
 	{
 		name: "Café Nora",
-		screenshot: cafeNoraImage,
+		screenshot: cafeNoraProjectImage,
 		tech: ["HTML", "CSS"],
 		about: "A multi-page café website with a homepage, gallery, menu page, contact section and a booking form.",
 		learned:
@@ -33,7 +33,7 @@ const projects = [
 
 	{
 		name: "JavaScript Assignments",
-		screenshot: javascriptAssignmentsImage,
+		screenshot: jsAssignmentsProjectImage,
 		tech: ["JavaScript", "HTML", "CSS"],
 		about: "This website is a collection of my vanilla JavaScript course assignments. It includes a landing page with links to six assignment pages, where I also added small mini-projects to practice each lesson topic more in depth.",
 		learned:
@@ -45,7 +45,7 @@ const projects = [
 	},
 	{
 		name: "Bhromaon",
-		screenshot: bhromaonImage,
+		screenshot: bhromaonProjectImage,
 		tech: ["SCSS", "CSS", "HTML", "JavaScript"],
 		about: "A responsive travel website built from a Figma design. The site includes travel destination content, navigation, a search feature and responsive sections.",
 		learned:
