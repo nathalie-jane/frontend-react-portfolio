@@ -26,13 +26,14 @@
 /* Navigation link list */
 .site-nav__list {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	gap: 24px;
 }
 
 /* Individual navigation link */
 .site-nav__link {
 	color: #1c1917;
-	font-size: 0.875rem;
+	font-size: clamp(0.875rem, 0.696rem + 0.893vw, 1.125rem);
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.05rem;
@@ -42,4 +43,23 @@
 /* Active navigation link styling */
 .site-nav__link--active {
 	font-weight: 600;
+}
+
+/* Responsive adjustments for tablet */
+@media screen and (min-width: 48rem) {
+	.site-header {
+		padding-inline: 32px;
+	}
+
+	.site-nav {
+		padding-block: 24px;
+	}
+
+	.site-nav__list {
+		gap: none;
+	}
+
+	.site-nav__link {
+		font-size: 1.125rem;
+	}
 }
