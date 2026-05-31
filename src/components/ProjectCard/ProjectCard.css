@@ -71,6 +71,7 @@
 	padding-left: 4px;
 }
 
+/* Adjust spacing for 2nd and 3rd project cards */
 .project-card:nth-child(2) .project-card__group,
 .project-card:nth-child(3) .project-card__group {
 	margin-bottom: 16px;

@@ -6,8 +6,8 @@
 ====================================== */
 
 import "./Projects.css";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
-import projects from "../data/projects";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import projects from "../../data/projects";
 
 function Projects() {
 	return (

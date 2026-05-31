@@ -34,3 +34,8 @@ img {
 	width: 100%;
 	height: auto;
 }
+
+/* Show pointer cursor on clickable buttons */
+button {
+	cursor: pointer;
+}

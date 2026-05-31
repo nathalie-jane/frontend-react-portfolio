@@ -2,7 +2,7 @@
     COMPONENT: PROJECT CARD
 
     Renders project data as a
-    reusable portfolio card
+    reusable project card
 ====================================== */
 
 import "./ProjectCard.css";
