@@ -14,7 +14,7 @@ function Projects() {
 		<section className="projects">
 			<div className="projects__inner">
 				<div className="projects__heading">
-					<h1 className="projects__title">My Projects</h1>
+					<h1 className="projects__title">Projects</h1>
 					<p className="projects__intro">A collection of some of my recent work</p>
 				</div>
 

@@ -1,3 +1,10 @@
+/* ===================================
+    COMPONENT: NAVIGATION
+
+    Renders main site navigation with
+    links to each page
+====================================== */
+
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 

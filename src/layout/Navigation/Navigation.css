@@ -1,0 +1,40 @@
+/* =======================================
+    COMPONENT: NAVIGATION
+
+    Layout and styling for site header 
+	and navigation bar
+========================================== */
+
+/* Wrapper for sticky site header */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	padding-inline: 16px;
+	border-bottom: 1px solid #e7e5e4;
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+}
+
+/* Main navigation container */
+.site-nav {
+	width: 100%;
+	padding-block: 16px;
+}
+
+/* Navigation link list */
+.site-nav__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Individual navigation link */
+.site-nav__link {
+	color: #1c1917;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
+}
