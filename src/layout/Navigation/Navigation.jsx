@@ -6,7 +6,7 @@
 ====================================== */
 
 import "./Navigation.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navigation() {
 	return (
@@ -14,19 +14,25 @@ function Navigation() {
 			<nav className="site-nav">
 				<ul className="site-nav__list">
 					<li className="site-nav__item">
-						<Link className="site-nav__link" to="/">
+						<NavLink
+							className={({ isActive }) => (isActive ? "site-nav__link site-nav__link--active" : "site-nav__link")}
+							to="/">
 							Home
-						</Link>
+						</NavLink>
 					</li>
 					<li className="site-nav__item">
-						<Link className="site-nav__link" to="/about">
+						<NavLink
+							className={({ isActive }) => (isActive ? "site-nav__link site-nav__link--active" : "site-nav__link")}
+							to="/about">
 							About
-						</Link>
+						</NavLink>
 					</li>
 					<li className="site-nav__item">
-						<Link className="site-nav__link" to="/projects">
+						<NavLink
+							className={({ isActive }) => (isActive ? "site-nav__link site-nav__link--active" : "site-nav__link")}
+							to="/projects">
 							Projects
-						</Link>
+						</NavLink>
 					</li>
 				</ul>
 			</nav>

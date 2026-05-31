@@ -33,8 +33,13 @@
 .site-nav__link {
 	color: #1c1917;
 	font-size: 0.875rem;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.05rem;
 	text-transform: uppercase;
+}
+
+/* Active navigation link styling */
+.site-nav__link--active {
+	font-weight: 600;
 }
