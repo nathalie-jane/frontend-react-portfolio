@@ -54,7 +54,7 @@
 	}
 
 	.home__title {
-		font-size: 2rem;
+		font-size: clamp(2rem, 1.111rem + 1.852vw, 2.5rem);
 		letter-spacing: 0.03rem;
 	}
 
@@ -62,5 +62,17 @@
 		font-size: 1.125rem;
 		line-height: 1.6;
 		letter-spacing: 0.02rem;
+	}
+}
+
+/* Responsive adjustments for desktop */
+@media screen and (min-width: 75rem) {
+	.home__heading {
+		gap: 12px;
+	}
+
+	.home__title {
+		font-size: 2.5rem;
+		letter-spacing: 0.04rem;
 	}
 }
