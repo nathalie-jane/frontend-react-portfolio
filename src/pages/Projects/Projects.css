@@ -18,7 +18,7 @@
 	margin-inline: auto;
 }
 
-/* Text block wrapper */
+/* Heading content wrapper */
 .projects__heading {
 	display: grid;
 	justify-items: center;
@@ -46,11 +46,39 @@
 	letter-spacing: 0.015rem;
 }
 
-/* Grid layout for Project cards */
+/* Toggle button for project card visibility */
+.projects__button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 16px;
+	padding: 10px 16px;
+	color: #ffffff;
+	background-color: #1c1917;
+	border: 1px solid #1c1917;
+	border-radius: 12px;
+
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.03rem;
+	text-transform: capitalize;
+}
+
+/* Project card grid (hidden by default) */
 .projects__collection {
-	display: grid;
+	display: none;
 	grid-template-columns: 1fr;
 	gap: 32px;
+}
+
+/* Visible state for project grid */
+.projects__collection--visible {
+	display: grid;
 }
 
 /* Responsive adjustments for tablet */
@@ -94,5 +122,15 @@
 
 	.projects__inner {
 		max-width: 75rem;
+	}
+
+	.projects__heading {
+		gap: 12px;
+	}
+
+	/* Hover state for toggle button */
+	.projects__button:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 	}
 }
