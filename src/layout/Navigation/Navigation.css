@@ -38,6 +38,7 @@
 	line-height: 1.5;
 	letter-spacing: 0.05rem;
 	text-transform: uppercase;
+	transition: color 0.2s ease;
 }
 
 /* Active navigation link styling */
@@ -52,11 +53,11 @@
 	}
 
 	.site-nav {
-		padding-block: 24px;
+		padding-block: 20px;
 	}
 
 	.site-nav__list {
-		gap: none;
+		gap: 40px;
 	}
 
 	.site-nav__link {
@@ -69,10 +70,14 @@
 	.site-nav {
 		max-width: 75rem;
 		margin-inline: auto;
-		padding-block: 20px;
 	}
 
 	.site-nav__link {
 		letter-spacing: 0.06rem;
+	}
+
+	/* Hover state for navigation links */
+	.site-nav__link:hover {
+		color: #57534d;
 	}
 }

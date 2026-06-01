@@ -1,20 +1,20 @@
 /* =======================================
     SECTION: PROJECTS
 
-	Layout and styling for projects 
+	Layout and styling for Projects 
 	section
 ========================================== */
 
-/* Main container for the projects section */
+/* Main container for Projects section */
 .projects {
 	width: 100%;
 	padding-block: 48px;
 }
 
-/* Inner container for projects section */
+/* Inner container for Projects section */
 .projects__inner {
 	width: 100%;
-	max-width: 75rem;
+	max-width: 36rem;
 	margin-inline: auto;
 }
 
@@ -46,7 +46,7 @@
 	letter-spacing: 0.015rem;
 }
 
-/* Grid layout for project cards */
+/* Grid layout for Project cards */
 .projects__collection {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -57,6 +57,10 @@
 @media screen and (min-width: 48rem) {
 	.projects {
 		padding-block: 56px;
+	}
+
+	.projects__inner {
+		max-width: 52rem;
 	}
 
 	.projects__heading {
@@ -74,7 +78,7 @@
 		letter-spacing: 0.02rem;
 	}
 
-	/* 2-column grid for project cards */
+	/* 2-column grid for Project cards */
 	.projects__collection {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -82,9 +86,13 @@
 
 /* Responsive adjustments for desktop */
 @media screen and (min-width: 75rem) {
-	/* 3-column grid for project cards */
+	/* 3-column grid for Project cards */
 	.projects__collection {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 40px;
+	}
+
+	.projects__inner {
+		max-width: 75rem;
 	}
 }

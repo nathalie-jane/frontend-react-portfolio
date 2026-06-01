@@ -1,8 +1,8 @@
 /* ===================================
     PAGE: PROJECTS
 
-    Renders projects page layout
-    and displays project cards
+    Renders Projects page layout
+    and displays Project cards
 ====================================== */
 
 import "./Projects.css";
