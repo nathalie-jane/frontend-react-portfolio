@@ -46,3 +46,21 @@
 	line-height: 1.5;
 	letter-spacing: 0.015rem;
 }
+
+/* Responsive adjustments for tablet */
+@media screen and (min-width: 48rem) {
+	.home__inner {
+		max-width: 52rem;
+	}
+
+	.home__title {
+		font-size: 2rem;
+		letter-spacing: 0.03rem;
+	}
+
+	.home__intro {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		letter-spacing: 0.02rem;
+	}
+}
