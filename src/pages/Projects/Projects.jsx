@@ -9,15 +9,25 @@ import { useState } from "react";
 
 import "./Projects.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import ProjectPopup from "../../components/ProjectPopup/ProjectPopup";
 import projects from "../../data/projects";
 
 function Projects() {
 	const [showProjects, setShowProjects] = useState(false);
+	const [projectDetails, setProjectDetails] = useState(null);
 
 	const toggleProjects = () => {
 		setShowProjects(function (isVisible) {
 			return !isVisible;
 		});
+	};
+
+	const openProjectPopup = (selectedProject) => {
+		setProjectDetails(selectedProject);
+	};
+
+	const closeProjectPopup = () => {
+		setProjectDetails(null);
 	};
 
 	return (
@@ -44,11 +54,25 @@ function Projects() {
 								role={project.role}
 								challenges={project.challenges}
 								githubRepo={project.githubRepo}
+								openPopup={() => openProjectPopup(project)}
 							/>
 						);
 					})}
 				</div>
 			</div>
+			{projectDetails && (
+				<ProjectPopup
+					name={projectDetails.name}
+					screenshot={projectDetails.screenshot}
+					tech={projectDetails.tech}
+					about={projectDetails.about}
+					learned={projectDetails.learned}
+					role={projectDetails.role}
+					challenges={projectDetails.challenges}
+					githubRepo={projectDetails.githubRepo}
+					closePopup={closeProjectPopup}
+				/>
+			)}
 		</section>
 	);
 }

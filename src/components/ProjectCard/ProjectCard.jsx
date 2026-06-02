@@ -26,30 +26,13 @@ function ProjectCard(props) {
 
 				<div className="project-card__group">
 					<div className="project-card__info">
-						<h3 className="project-card__info-title">About</h3>
 						<p className="project-card__info-text">{props.about}</p>
-					</div>
-
-					<div className="project-card__info">
-						<h3 className="project-card__info-title">What I learned</h3>
-						<p className="project-card__info-text">{props.learned}</p>
-					</div>
-
-					<div className="project-card__info">
-						<h3 className="project-card__info-title">My role</h3>
-						<p className="project-card__info-text">{props.role}</p>
-					</div>
-
-					<div className="project-card__info">
-						<h3 className="project-card__info-title">Challenges solved</h3>
-						<p className="project-card__info-text">{props.challenges}</p>
 					</div>
 				</div>
 
-				<a className="project-card__link" href={props.githubRepo} target="_blank" rel="noopener noreferrer">
-					<span className="project-card__repo-link">View repository</span>
-					<i className="project-card__repo-icon fa-brands fa-github"></i>
-				</a>
+				<button className="project-card__details" type="button" onClick={props.openPopup}>
+					View details
+				</button>
 			</div>
 		</article>
 	);

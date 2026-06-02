@@ -103,7 +103,7 @@
 }
 
 /* Repo button link */
-.project-card__link {
+.project-card__details {
 	display: inline-flex;
 	align-self: flex-start;
 	align-items: baseline;
@@ -150,13 +150,13 @@
 /* Responsive adjustments for desktop */
 @media screen and (min-width: 75rem) {
 	/* Hover state for repo link button */
-	.project-card__link:hover {
+	.project-card__details:hover {
 		transform: scale(1.05);
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 	}
 
 	/* Visited state for repo link button */
-	.project-card__link:visited {
+	.project-card__details:visited {
 		color: #ffffff;
 	}
 }
