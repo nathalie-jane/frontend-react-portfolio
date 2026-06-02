@@ -5,9 +5,10 @@
     styles
 ====================================== */
 
-/* Default page background color */
+/* Base page styling */
 body {
 	background-color: #fafaf9;
+	overflow-y: scroll;
 }
 
 /* Main page wrapper */
