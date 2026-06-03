@@ -11,17 +11,18 @@
 	overflow-x: hidden;
 	background-color: #ffffff;
 	border: 1px solid #e7e5e4;
-	border-radius: 12px;
+	border-radius: 10px;
 	box-shadow:
 		0 1px 3px 0 rgba(0, 0, 0, 0.1),
 		0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Project screenshot image */
+/* Project image wrapper */
 .project-card__image {
+	overflow: hidden;
 	height: auto;
 	object-fit: cover;
-	background-color: #e7e5e4;
+	background-color: #ffffff;
 	border-bottom: 1px solid #e7e5e4;
 }
 
@@ -30,21 +31,20 @@
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	padding: 24px 16px;
+	padding: 16px;
 }
 
 /* Project title text */
 .project-card__title {
-	margin-bottom: 8px;
 	padding-left: 4px;
 	color: #1c1917;
-	font-size: 1.25rem;
+	font-size: 1.375rem;
 	font-weight: 500;
 	line-height: 1.3;
-	letter-spacing: 0.02rem;
+	letter-spacing: 0.04rem;
 }
 
-/* List of technologies */
+/* Tech tag list */
 .project-card__tech-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -64,37 +64,9 @@
 	border-radius: 12px;
 }
 
-/* Wrapper for project info blocks  */
-.project-card__group {
-	display: grid;
-	gap: 16px;
-	padding-left: 4px;
-}
-
-/* Adjust spacing for 2nd and 3rd project cards */
-.project-card:nth-child(2) .project-card__group,
-.project-card:nth-child(3) .project-card__group {
-	margin-bottom: 16px;
-}
-
-/* Individual project info block */
+/* Project summary text */
 .project-card__info {
-	display: grid;
-	gap: 4px;
-}
-
-/* Heading for each info block */
-.project-card__info-title {
-	color: #1c1917;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-	letter-spacing: 0.03rem;
-	text-transform: capitalize;
-}
-
-/* Text content for each info block */
-.project-card__info-text {
+	padding-left: 4px;
 	color: #57534d;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -102,27 +74,17 @@
 	letter-spacing: 0.015rem;
 }
 
-/* Repo button link */
+/* Project details button */
 .project-card__details {
 	display: inline-flex;
-	align-self: flex-start;
-	align-items: baseline;
+	align-self: center;
+	align-items: center;
 	gap: 8px;
-	margin-left: 4px;
-	margin-top: auto;
+	margin-top: 12px;
 	padding: 10px 16px;
 	color: #ffffff;
 	background-color: #1c1917;
 	border: 1px solid #1c1917;
-	border-radius: 12px;
-
-	transition:
-		transform 0.2s ease,
-		box-shadow 0.2s ease;
-}
-
-/* Repo link label */
-.project-card__repo-link {
 	font-size: 0.875rem;
 	font-weight: 500;
 	line-height: 1.5;
@@ -130,33 +92,14 @@
 	text-transform: capitalize;
 }
 
-/* GitHub icon in repo link */
-.project-card__repo-icon {
-	font-size: 0.875rem;
-}
-
 /* Responsive adjustments for tablet */
 @media screen and (min-width: 48rem) {
 	.project-card__content {
 		gap: 20px;
-		padding: 24px 20px;
+		padding: 24px;
 	}
 
-	.project-card__group {
-		gap: 20px;
-	}
-}
-
-/* Responsive adjustments for desktop */
-@media screen and (min-width: 75rem) {
-	/* Hover state for repo link button */
-	.project-card__details:hover {
-		transform: scale(1.05);
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-	}
-
-	/* Visited state for repo link button */
-	.project-card__details:visited {
-		color: #ffffff;
+	.project-card__details {
+		margin-top: auto;
 	}
 }

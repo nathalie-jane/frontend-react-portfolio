@@ -24,11 +24,7 @@ function ProjectCard(props) {
 					})}
 				</ul>
 
-				<div className="project-card__group">
-					<div className="project-card__info">
-						<p className="project-card__info-text">{props.about}</p>
-					</div>
-				</div>
+				<p className="project-card__info">{props.about}</p>
 
 				<button className="project-card__details" type="button" onClick={props.openPopup}>
 					View details
