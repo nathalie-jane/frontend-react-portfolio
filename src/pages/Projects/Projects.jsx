@@ -41,6 +41,18 @@ function Projects() {
 					</button>
 				</div>
 
+				{showProjects && (
+					<div className="projects__search">
+						<i className="projects__search-icon fa-brands fa-sistrix"></i>
+						<input
+							className="projects__search-input"
+							type="search"
+							name="project-search"
+							id="project-search"
+							placeholder="Search by project name or technology"></input>
+					</div>
+				)}
+
 				<div className={showProjects ? "projects__collection projects__collection--visible" : "projects__collection"}>
 					{projects.map(function (project) {
 						return (
@@ -60,6 +72,7 @@ function Projects() {
 					})}
 				</div>
 			</div>
+
 			{projectDetails && (
 				<ProjectPopup
 					name={projectDetails.name}
