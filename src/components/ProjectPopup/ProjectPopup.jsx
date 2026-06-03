@@ -54,7 +54,7 @@ function ProjectPopup(props) {
 					</div>
 
 					<a className="project-popup__link" href={props.githubRepo} target="_blank" rel="noopener noreferrer">
-						<span className="project-popup__repo-link">View repository</span>
+						<span className="project-popup__link-label">View repository</span>
 						<i className="project-popup__repo-icon fa-brands fa-github"></i>
 					</a>
 				</div>
