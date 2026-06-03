@@ -141,7 +141,7 @@
 	text-transform: capitalize;
 }
 
-/* TProject info text */
+/* Project info text */
 .project-popup__info-text {
 	color: #57534d;
 	font-size: clamp(0.844rem, 0.822rem + 0.111vw, 0.875rem);
@@ -220,5 +220,26 @@
 	.project-popup__info-text,
 	.project-popup__link-label {
 		font-size: 0.875rem;
+	}
+}
+
+/* Responsive adjustments for desktop */
+@media screen and (min-width: 75rem) {
+	.project-popup {
+		max-width: 42rem;
+	}
+
+	.project-popup__heading {
+		padding-inline: 32px;
+	}
+
+	.project-popup__content {
+		padding: 32px;
+	}
+
+	/* Hover state for repo link button */
+	.project-popup__link:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 	}
 }
