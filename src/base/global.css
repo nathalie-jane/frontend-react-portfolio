@@ -1,14 +1,19 @@
 /* ===================================
     GLOBAL
     
-	Base page layout and background
-    styles
+	Base page layout, background and
+	shared element styles
 ====================================== */
 
-/* Base page styling */
+/* Base page styles */
 body {
 	background-color: #fafaf9;
 	overflow-y: scroll;
+}
+
+/* Base button shape */
+button {
+	border-radius: 999px;
 }
 
 /* Main page wrapper */
@@ -27,5 +32,21 @@ body {
 @media screen and (min-width: 48rem) {
 	.site-main {
 		padding-inline: 32px;
+	}
+}
+
+/* Responsive adjustments for desktop */
+@media screen and (min-width: 75rem) {
+	/* Transition state for buttons */
+	button {
+		transition:
+			transform 0.25s ease,
+			box-shadow 0.25s ease;
+	}
+
+	/* Hover state for buttons */
+	button:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 	}
 }
