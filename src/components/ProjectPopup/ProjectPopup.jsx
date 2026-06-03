@@ -1,7 +1,8 @@
 /* ===================================
     COMPONENT: PROJECT POPUP
 
-   
+    Renders selected project details
+    inside a popup
 ====================================== */
 
 import "./ProjectPopup.css";
