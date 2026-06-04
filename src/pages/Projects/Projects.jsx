@@ -35,21 +35,31 @@ function Projects() {
 		setSearchInput(event.target.value);
 	};
 
-	const normalizeSearchInput = (searchInput) => {
-		const formattedInput = searchInput
+	const normalizeSearchInput = (term) => {
+		const formattedTerm = term
 			.toLowerCase()
 			.normalize("NFD")
 			.replace(/[\u0300-\u036f]/g, "");
 
-		return formattedInput;
+		return formattedTerm;
 	};
 
 	const searchResults = projects.filter((project) => {
-		const searchTerm = searchInput.toLowerCase();
-		const projectName = normalizeSearchInput(project.name);
-		const hasMatchingName = projectName.includes(searchTerm);
+		const searchTerm = normalizeSearchInput(searchInput);
 
-		return hasMatchingName;
+		const hasMatchingName = normalizeSearchInput(project.name).includes(searchTerm);
+
+		const hasMatchingTech = project.tech.some((techItem) => {
+			const techTerm = techItem.toLowerCase();
+
+			return techTerm.includes(searchTerm);
+		});
+
+		if (hasMatchingName || hasMatchingTech) {
+			return true;
+		} else {
+			return false;
+		}
 	});
 
 	return (
@@ -73,7 +83,8 @@ function Projects() {
 							id="project-search"
 							placeholder="Search by project name or technology"
 							value={searchInput}
-							onChange={handleProjectSearch}></input>
+							onChange={handleProjectSearch}
+						/>
 					</div>
 				)}
 
