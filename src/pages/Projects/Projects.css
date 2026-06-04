@@ -82,6 +82,7 @@
 	transform: translateY(-50%);
 	color: #0a0a0a;
 	font-size: clamp(1.25rem, 1.161rem + 0.238vw, 1.375rem);
+	pointer-events: none;
 }
 
 /* Search input field */
@@ -96,7 +97,6 @@
 	line-height: 1.43;
 	letter-spacing: 0.01rem;
 	text-align: left;
-	pointer-events: none;
 
 	box-shadow:
 		0 1px 3px 0 rgba(0, 0, 0, 0.1),

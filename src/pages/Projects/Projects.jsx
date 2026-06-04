@@ -15,6 +15,7 @@ import projects from "../../data/projects";
 function Projects() {
 	const [showProjects, setShowProjects] = useState(false);
 	const [projectDetails, setProjectDetails] = useState(null);
+	const [searchInput, setSearchInput] = useState("");
 
 	const toggleProjects = () => {
 		setShowProjects(function (isVisible) {
@@ -29,6 +30,18 @@ function Projects() {
 	const closeProjectPopup = () => {
 		setProjectDetails(null);
 	};
+
+	const handleProjectSearch = (event) => {
+		setSearchInput(event.target.value);
+	};
+
+	const searchResults = projects.filter((project) => {
+		const searchTerm = searchInput.toLowerCase();
+		const projectName = project.name.toLowerCase();
+		const hasMatchingName = projectName.includes(searchTerm);
+
+		return hasMatchingName;
+	});
 
 	return (
 		<section className="projects">
@@ -49,12 +62,14 @@ function Projects() {
 							type="search"
 							name="project-search"
 							id="project-search"
-							placeholder="Search by project name or technology"></input>
+							placeholder="Search by project name or technology"
+							value={searchInput}
+							onChange={handleProjectSearch}></input>
 					</div>
 				)}
 
 				<div className={showProjects ? "projects__collection projects__collection--visible" : "projects__collection"}>
-					{projects.map(function (project) {
+					{searchResults.map((project) => {
 						return (
 							<ProjectCard
 								key={project.name}
