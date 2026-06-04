@@ -69,7 +69,7 @@
 	width: 100%;
 	max-width: 22rem;
 	margin-inline: auto;
-	margin-bottom: 40px;
+	margin-bottom: 48px;
 }
 
 /* Search icon */
@@ -128,6 +128,17 @@
 	color: transparent;
 }
 
+/* Message displayed when no search results are found */
+.projects__search-message {
+	padding-block: 40px;
+	color: #57534d;
+	font-size: clamp(0.938rem, 0.894rem + 0.221vw, 1rem);
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.015rem;
+	text-align: center;
+}
+
 /* Project card grid (hidden by default) */
 .projects__collection {
 	display: none;
@@ -171,6 +182,11 @@
 
 	.projects__search-input {
 		padding-left: 48px;
+	}
+
+	.projects__search-message {
+		font-size: 1rem;
+		line-height: 1.6;
 	}
 
 	/* 2-column grid for Project cards */

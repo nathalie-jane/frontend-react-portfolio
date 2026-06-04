@@ -1,8 +1,9 @@
 /* ===================================
     PAGE: PROJECTS
 
-    Renders Projects page layout
-    and displays Project cards
+    Renders Projects page with
+	searchable project cards and popups
+	for project details
 ====================================== */
 
 import { useState } from "react";
@@ -17,24 +18,29 @@ function Projects() {
 	const [projectDetails, setProjectDetails] = useState(null);
 	const [searchInput, setSearchInput] = useState("");
 
+	// Toggle visibility for project cards and search field
 	const toggleProjects = () => {
 		setShowProjects(function (isVisible) {
 			return !isVisible;
 		});
 	};
 
+	// Open popup with project details when a project card is clicked
 	const openProjectPopup = (selectedProject) => {
 		setProjectDetails(selectedProject);
 	};
 
+	// Close project details popup
 	const closeProjectPopup = () => {
 		setProjectDetails(null);
 	};
 
+	// Update search input state as user types in the search field
 	const handleProjectSearch = (event) => {
 		setSearchInput(event.target.value);
 	};
 
+	// Normalize search input for case-insensitive and accent-insensitive matching
 	const normalizeSearchInput = (term) => {
 		const formattedTerm = term
 			.toLowerCase()
@@ -44,6 +50,7 @@ function Projects() {
 		return formattedTerm;
 	};
 
+	// Filter projects based on search input matching project name or technologies used
 	const searchResults = projects.filter((project) => {
 		const searchTerm = normalizeSearchInput(searchInput);
 
@@ -62,6 +69,14 @@ function Projects() {
 		}
 	});
 
+	// Check if search input has no matching results
+	const hasNoSearchResults = () => {
+		if (searchInput.trim() !== "" && searchResults.length === 0) {
+			return true;
+		}
+		return false;
+	};
+
 	return (
 		<section className="projects">
 			<div className="projects__inner">
@@ -74,18 +89,21 @@ function Projects() {
 				</div>
 
 				{showProjects && (
-					<div className="projects__search">
-						<i className="projects__search-icon fa-brands fa-sistrix"></i>
-						<input
-							className="projects__search-input"
-							type="search"
-							name="project-search"
-							id="project-search"
-							placeholder="Search by project name or technology"
-							value={searchInput}
-							onChange={handleProjectSearch}
-						/>
-					</div>
+					<>
+						<div className="projects__search">
+							<i className="projects__search-icon fa-brands fa-sistrix"></i>
+							<input
+								className="projects__search-input"
+								type="search"
+								name="project-search"
+								id="project-search"
+								placeholder="Search by project name or technology"
+								value={searchInput}
+								onChange={handleProjectSearch}
+							/>
+						</div>
+						{hasNoSearchResults() && <p className="projects__search-message">No projects matched your search.</p>}
+					</>
 				)}
 
 				<div className={showProjects ? "projects__collection projects__collection--visible" : "projects__collection"}>
