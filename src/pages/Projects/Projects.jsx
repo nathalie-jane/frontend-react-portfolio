@@ -35,9 +35,18 @@ function Projects() {
 		setSearchInput(event.target.value);
 	};
 
+	const normalizeSearchInput = (searchInput) => {
+		const formattedInput = searchInput
+			.toLowerCase()
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "");
+
+		return formattedInput;
+	};
+
 	const searchResults = projects.filter((project) => {
 		const searchTerm = searchInput.toLowerCase();
-		const projectName = project.name.toLowerCase();
+		const projectName = normalizeSearchInput(project.name);
 		const hasMatchingName = projectName.includes(searchTerm);
 
 		return hasMatchingName;
